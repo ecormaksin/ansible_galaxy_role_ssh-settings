@@ -1,2 +1,7 @@
 ---
 # vars file for ansible_galaxy_role_ssh-settings
+
+config:
+  file:
+    name: config
+    dest_path: $HOME/.ssh/config

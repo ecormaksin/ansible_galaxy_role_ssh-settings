@@ -1,2 +1,8 @@
 ---
 # tasks file for ansible_galaxy_role_ssh-settings
+
+- name: "Set SSH config | copy file"
+  ignore_errors: "{{ ansible_check_mode }}"
+  copy:
+    src: "{{ config.file.name }}"
+    dest: "{{ config.file.dest_path }}"
